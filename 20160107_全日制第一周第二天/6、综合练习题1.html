@@ -21,6 +21,7 @@
     //    fn()(30);//->41
     //思考题：
     //1、
+<<<<<<< HEAD
 //        function fn(i) {
     //            return function (n) {
     //                console.log(n + (i++));
@@ -31,19 +32,31 @@
     //        fn(20)(40);      //60
     //        fn(30)(50);     //80
     //        f(30);          //41
+=======
+    function fn(i) {
+        return function (n) {
+            console.log(n + (i++));
+        }
+    }
+    var f = fn(10);
+    f(20);
+    fn(20)(40);
+    fn(30)(50);
+    f(30);
+>>>>>>> 186e4a897320055298901f0121d8d2fd104f1302
 
     //2、
-    //    var i = 10;
-    //    function fn() {
-    //        return function (n) {
-    //            console.log(n + (++i));
-    //        }
-    //    }
-    //    var f = fn();
-    //    f(20);
-    //    fn()(20);
-    //    fn()(30);
-    //    f(30);
+    var i = 10;
+    function fn() {
+        return function (n) {
+            console.log(n + (++i));
+        }
+    }
+    var f = fn();
+    f(20);
+    fn()(20);
+    fn()(30);
+    f(30);
 </script>
 </body>
 </html>
