@@ -24,7 +24,6 @@ function bindData() {
             oTd.innerHTML = cur[key];
             oTr.appendChild(oTd);
         }
-
         frg.appendChild(oTr);
     }
     tBody.appendChild(frg);
