@@ -46,7 +46,6 @@ utils.offset = function (curEle) {
     return {top: t, left: l};
 };
 
-
 //win:获取或者设置所有和浏览器有关系的盒子模型信息
 //->attr:对应的属性名
 //->value:给属性名设置的属性值,如果第二个参数不传就是获取,传了就是设置
