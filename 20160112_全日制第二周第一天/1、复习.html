@@ -10,28 +10,33 @@
     //    var i = 5;
     //    function fn() {
     //        i += 5;
+    //        //console.log(i);
     //        return function (n) {
     //            console.log(n + (i++));
     //        }
     //    }
     //    var f = fn();
-    //    f(5);
-    //    fn()(10);
-    //    fn()(10);
-    //    f(5);
+    //    f(5);//15
+    //    fn()(10);//26
+    //    fn()(10);//32
+    //    f(5);//28
 
     //第5题:
-    var num = 10;  var obj = {num: 15};
+    var num = 10;
+    var obj = {num: 15};
     obj.fn = (function () {
         this.num = num * 2;
-        num*=2;
+        num *= 2;
         return function (n) {
-            this.num = num*n;
+            this.num = num * n;
             num++;
+            console.log(this);
             console.log(num);
         }
     })();
-    var fn = obj.fn;  fn(3);  obj.fn(4);
+    var fn = obj.fn;
+    fn(3);
+    obj.fn(4);
     console.log(num, obj.num);
 
 

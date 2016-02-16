@@ -6,7 +6,7 @@
             val = window.getComputedStyle(curEle, null)[attr];
         } else {
             if (attr === "opacity") {
-                val = curEle.currentStyle["filter"]
+                val = curEle.currentStyle["filter"];
                 reg = /^alpha\(opacity=(\d+(?:\.\d+)?)\)$/;
                 val = reg.test(val) ? reg.exec(val)[1] / 100 : 1;
             } else {
@@ -17,7 +17,7 @@
         return reg.test(val) ? parseFloat(val) : val;
     }
 
-    //->getCss:设置当前元素的某一个样式属性的值
+    //->setCss:设置当前元素的某一个样式属性的值
     function setCss(curEle, attr, value) {
         if (attr === "float") {
             curEle["style"]["cssFloat"] = value;
