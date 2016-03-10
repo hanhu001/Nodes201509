@@ -33,7 +33,7 @@
     //->阶段:0UNSENT请求还没有发送 1OPENED已经打开链接地址了 2HEADERS_RECEIVED我们已经得到了响应头信息 3LOADING响应的数据正在处理中 4DONE请求完成,我们已经获取到需要的数据了
     xhr.onreadystatechange = function () {
         //this->xhr
-        var state = this.readyState;
+        var state = this.readyState;//获取0、1、2、3、4这几个数字
         if (state === 2) {
             console.log(this.getResponseHeader("Date"));
             //this.getAllResponseHeaders()
